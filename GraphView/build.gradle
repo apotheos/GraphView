@@ -16,3 +16,27 @@ android {
     }
 }
 
+apply plugin: 'maven'
+
+version = '3.1'
+group = 'com.jjoe64.graphview'
+
+configurations {
+    archives {
+        extendsFrom configurations.default
+    }
+}
+
+uploadArchives {
+    configuration = configurations.archives
+    repositories.mavenDeployer {
+        repository(url: 'http://maven.vgbio.com:8080/content/repositories/sdk/') {
+            authentication(userName: mavenUser, password: mavenPass)
+        }
+        pom.project {
+            name 'graphview'
+            packaging 'aar'
+            description 'Fork of GraphView library'
+        }
+    }
+}
