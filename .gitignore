@@ -37,5 +37,5 @@ proguard-project.txt
 # Gradle
 /build
 /.gradle
-/GraphView/build
+/graphview/build
 /gradle.properties
