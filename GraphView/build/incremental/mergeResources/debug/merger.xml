@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/home/mjholler/git/github.com/apotheos/VGBio-Android/GraphView/GraphView/src/main/res" />
+        <source path="/home/mjholler/git/github.com/apotheos/VGBio-Android/GraphView/GraphView/build/res/rs/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/mjholler/git/github.com/apotheos/VGBio-Android/GraphView/GraphView/src/debug/res" />
+    </dataSet>
+
+</merger>
