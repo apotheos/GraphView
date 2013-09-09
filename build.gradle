@@ -6,25 +6,17 @@ buildscript {
         classpath 'com.android.tools.build:gradle:0.5.+'
     }
 }
-apply plugin: 'android-library'
 
-repositories {
-    mavenCentral()
-}
+allprojects {
+    group = 'com.jjoe64.graphview'
+    version = '3.1'
 
-android {
-    compileSdkVersion 17
-    buildToolsVersion "17.0.0"
-
-    sourceSets {
-        main {
-            manifest.srcFile 'GraphView/src/main/AndroidManifest.xml'
-        }
+    repositories {
+        mavenCentral()
     }
 
-    defaultConfig {
-        minSdkVersion 7
-        targetSdkVersion 17
+    tasks.withType(Compile) {
+        options.encoding = 'UTF-8'
     }
 }
 

@@ -1,1 +1,1 @@
-include ':GraphView'
+include 'GraphView'
