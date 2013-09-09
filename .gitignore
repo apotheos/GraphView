@@ -33,3 +33,7 @@ proguard-project.txt
 *.ipr
 *.iws
 .idea/
+
+# Gradle
+/build
+/.gradle
