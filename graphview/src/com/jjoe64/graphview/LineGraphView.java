@@ -31,8 +31,8 @@ import com.jjoe64.graphview.GraphViewSeries.GraphViewSeriesStyle;
  * Line Graph View. This draws a line chart.
  */
 public class LineGraphView extends GraphView {
-	private final Paint paintBackground;
-	private boolean drawBackground;
+	protected final Paint paintBackground;
+	protected boolean drawBackground;
 
 	public LineGraphView(Context context, AttributeSet attrs) {
 		super(context, attrs);
