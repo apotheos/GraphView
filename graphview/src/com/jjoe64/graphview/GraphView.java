@@ -321,13 +321,13 @@ abstract public class GraphView extends LinearLayout {
 	private ScaleGestureDetector scaleDetector;
 	private boolean scalable;
 	private final NumberFormat[] numberformatter = new NumberFormat[2];
-	private final List<GraphViewSeries> graphSeries;
+	protected final List<GraphViewSeries> graphSeries;
 	private boolean showLegend = false;
 	private float legendWidth = 120;
 	private LegendAlign legendAlign = LegendAlign.MIDDLE;
-	private boolean manualYAxis;
-	private double manualMaxYValue;
-	private double manualMinYValue;
+	protected boolean manualYAxis;
+	protected double manualMaxYValue;
+	protected double manualMinYValue;
 	private GraphViewStyle graphViewStyle;
 	private final GraphViewContentView graphViewContentView;
 	private CustomLabelFormatter customLabelFormatter;
@@ -370,7 +370,7 @@ abstract public class GraphView extends LinearLayout {
 		addView(graphViewContentView, new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT, 1));
 	}
 
-	private GraphViewDataInterface[] _values(int idxSeries) {
+	protected GraphViewDataInterface[] _values(int idxSeries) {
 		GraphViewDataInterface[] values = graphSeries.get(idxSeries).values;
 		synchronized (values) {
 			if (viewportStart == 0 && viewportSize == 0) {
