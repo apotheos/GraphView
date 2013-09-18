@@ -27,13 +27,18 @@ import android.graphics.Color;
  *
  */
 public class GraphViewStyle {
-	private int verticalLabelsColor;
-	private int horizontalLabelsColor;
-	private int gridColor;
-	private float textSize = 30f;
-	private int verticalLabelsWidth;
-	private int numVerticalLabels;
-	private int numHorizontalLabels;
+	protected int verticalLabelsColor;
+	protected int horizontalLabelsColor;
+	protected int gridColor;
+	protected float textSize = 30f;
+	protected int verticalLabelsWidth;
+	protected int numVerticalLabels;
+	protected int numHorizontalLabels;
+
+    protected boolean mHorizontalLabelsVisible;
+    protected boolean mVerticalLabelsVisible;
+    protected boolean mTitleVisible;
+
 
 	public GraphViewStyle() {
 		verticalLabelsColor = Color.WHITE;
@@ -74,6 +79,31 @@ public class GraphViewStyle {
 	public int getVerticalLabelsWidth() {
 		return verticalLabelsWidth;
 	}
+
+    public void setHorizontalLabelsVisible(boolean aHorizontalLabelsVisible) {
+        mHorizontalLabelsVisible = aHorizontalLabelsVisible;
+    }
+
+    public boolean areHorizontalLabelsVisible() {
+        return mHorizontalLabelsVisible;
+    }
+
+    public void setVerticalLabelsVisible(boolean aVerticalLabelsVisible) {
+        mVerticalLabelsVisible = aVerticalLabelsVisible;
+    }
+
+    public boolean areVerticalLabelsVisible() {
+        return mVerticalLabelsVisible;
+    }
+
+    public void setTitleVisible(boolean aTitleVisible) {
+        mTitleVisible = aTitleVisible;
+    }
+
+    public boolean isTitleVisible() {
+        return mTitleVisible;
+    }
+
 
 	public void setGridColor(int c) {
 		gridColor = c;
